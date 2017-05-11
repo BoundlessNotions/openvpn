@@ -29,6 +29,6 @@ if Chef::Config[:solo] && !chef_solo_search_installed?
     'you install the chef-solo-search cookbook.')
 else
   search('users', node['openvpn']['user_query']) do |u|
-    openvpn_user u['id']
+    openvpn_user_bundle u['id']
   end
 end
